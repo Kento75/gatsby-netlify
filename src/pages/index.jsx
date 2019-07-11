@@ -11,6 +11,7 @@ export default ({data}) => {
       {data.allWordpressPost.nodes.map (node => (
         <React.Fragment key={node.slug}>
           <Posts
+            alt={node.featured_media.slug}
             image={node.featured_media.source_url}
             title={node.title}
             excerpt={node.excerpt}
@@ -31,6 +32,7 @@ export const query = graphql`
       excerpt
       featured_media {
         source_url
+        slug
       }
     }
   }

@@ -9,14 +9,16 @@ import SEO from '../components/SEO';
 const PrimaryLayout = props => (
   <div>
     <SEO />
-    <Header title="Header of index page" />
-    <div className="container">
-      <div className="row justify-content-md-center">
-        <div className={props.column}>
-          {props.children}
+    <Header />
+    <main>
+      <div className="container">
+        <div className="row justify-content-md-center">
+          <div className={props.column}>
+            {props.children}
+          </div>
         </div>
       </div>
-    </div>
+    </main>
     <Footer />
   </div>
 );

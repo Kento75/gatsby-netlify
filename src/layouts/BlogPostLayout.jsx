@@ -20,13 +20,15 @@ const BlogPostLayout = ({data}) => {
         image={post.featured_media.source_url}
         keywords={post.categories.map (res => res.name).join (', ')}
       />
-      <Header title="Header of index page" />
-      <div className="container">
-        <div className="row justify-content-md-center">
-          <h1 dangerouslySetInnerHTML={{__html: post.title}} />
-          <div dangerouslySetInnerHTML={{__html: post.content}} />
+      <Header />
+      <main>
+        <div className="container">
+          <div className="row justify-content-md-center">
+            <h1 dangerouslySetInnerHTML={{__html: post.title}} />
+            <div dangerouslySetInnerHTML={{__html: post.content}} />
+          </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );
