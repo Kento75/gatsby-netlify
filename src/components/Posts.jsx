@@ -8,7 +8,7 @@ const Post = props => (
       <Card.Body>
         <Card.Title dangerouslySetInnerHTML={{__html: props.title}} />
         <Card.Text dangerouslySetInnerHTML={{__html: props.html}} />
-        <Button variant="primary" href={props.readMore}>Read More...</Button>
+        <Button variant="warning" href={props.readMore}>Read More...</Button>
       </Card.Body>
     </Card>
   </div>
