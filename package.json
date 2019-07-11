@@ -15,6 +15,8 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.13.9",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-offline": "^2.2.1",
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-source-wordpress": "^3.1.4",
