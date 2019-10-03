@@ -31,6 +31,7 @@ module.exports = {
       options: {
         baseUrl: baseUrl,
         includedRoutes: ['/wp/v2/**'],
+        excludedRoutes: ['/wp-json/**'],
         protocol: `http`,
         hostingWPCOM: false,
       },
