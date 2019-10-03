@@ -1,6 +1,12 @@
 var plugins = [{
       plugin: require('/Users/kento/Programing/VScodeProjects/gatsby-netlify/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/Users/kento/Programing/VScodeProjects/gatsby-netlify/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"GatsbyJS Bootstrap","short_name":"GatsbyJS","start_url":"/","background_color":"#f8f9fa","theme_color":"#FFFFFF","display":"standalone"},
+    },{
+      plugin: require('/Users/kento/Programing/VScodeProjects/gatsby-netlify/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

@@ -30,6 +30,11 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         baseUrl: baseUrl,
+        excludedRoutes: [
+          '/wp/v2/users/me',
+          '/acf/v2/options',
+          '/wp/v2/settings',
+        ],
         protocol: `http`,
         hostingWPCOM: false,
       },
