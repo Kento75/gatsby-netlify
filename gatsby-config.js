@@ -4,16 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const baseUrl = process.env.BASE_URL || `codingsrc.com`;
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Gatsby-Bootstrap",
-    description: "This is the description of our website",
-    keywords: "gatsby, gatsbyjs project, gatsby bootstrap",
-    image: "./static/gatsby.jpg",
-    url: "https://www.gatsbyjs.org/"
+    title: 'Gatsby-Bootstrap',
+    description: 'This is the description of our website',
+    keywords: 'gatsby, gatsbyjs project, gatsby bootstrap',
+    image: './static/gatsby.jpg',
+    url: 'https://www.gatsbyjs.org/',
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
@@ -21,12 +24,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`
+      resolve: `gatsby-transformer-remark`,
     },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `codingsrc.com`,
+        baseUrl: baseUrl,
         protocol: `http`,
         hostingWPCOM: false,
       },
@@ -35,17 +38,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "GatsbyJS Bootstrap",
-        short_name: "GatsbyJS",
-        start_url: "/",
-        background_color: "#f8f9fa",
-        theme_color: "#FFFFFF",
-        display: "standalone",
+        name: 'GatsbyJS Bootstrap',
+        short_name: 'GatsbyJS',
+        start_url: '/',
+        background_color: '#f8f9fa',
+        theme_color: '#FFFFFF',
+        display: 'standalone',
       },
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
   ],
-}
+};
 
 /*
       < Helmet >
